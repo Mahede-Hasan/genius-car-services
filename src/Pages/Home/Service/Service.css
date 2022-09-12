@@ -1,0 +1,46 @@
+.service {
+    margin: 20px auto;
+    width: 320px;
+    height: 430px;
+    border-radius: 6px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.service img{
+    width: 100%;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.service-info h2{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.service-info{
+    padding-left: 12px;
+    margin-bottom: 5px;
+    padding-right: 10px;
+}
+
+.service-info p{
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+
+.service-info h4{
+    margin-top: 0px;
+    margin-bottom: 8px;
+    font-size: 25px;
+    color: rgb(112, 112, 242);
+}
+
+.cart-btn{
+    color: white;
+    background-color: rgb(112, 112, 242);
+    padding: 6px 12px;
+    border: 1px solid rgb(112, 112, 242);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+}
