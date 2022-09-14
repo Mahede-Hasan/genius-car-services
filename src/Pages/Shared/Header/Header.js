@@ -23,11 +23,11 @@ const Header = () => {
                             <Nav.Link href="home#services">Services</Nav.Link>
                             <Nav.Link href="home#experts">Experts</Nav.Link>
                             <NavDropdown title="Reviews" id="collasible-nav-dropdown"  className='dropdown-nav'>
-                                <NavDropdown.Item href="#action/3.1">customer Review</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">
+                                <NavDropdown.Item className='drop-nav' href="#action/3.1">customer Review</NavDropdown.Item>
+                                <NavDropdown.Item className='drop-nav'  href="#action/3.2">
                                     Services
                                 </NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Satisfaction</NavDropdown.Item>
+                                <NavDropdown.Item className='drop-nav'  href="#action/3.3">Satisfaction</NavDropdown.Item>
                                 
                             </NavDropdown>
                         </Nav>

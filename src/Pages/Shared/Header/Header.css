@@ -8,7 +8,9 @@
 .nav-text a{
  color: white !important;
  font-size: 20px !important;
+ background-color: rgb(13, 110, 253);
 }
+
 
 .nav-text a:hover{
     color: rgb(176, 171, 171) !important;
@@ -22,6 +24,7 @@
     font-weight: 600;
     background-color: rgb(0, 119, 255);
     padding: 0px 14px;
+    width: 100px;
 }
 
 .sign-out:hover{
@@ -30,6 +33,13 @@ border: 1px solid rgb(203, 200, 200);
 }
 
 .dropdown-nav a{
-    background-color: rgb(0, 140, 255);
+    background-color: rgb(13, 110, 253);
+    float: none;
     
+}
+
+.drop-nav{
+    margin-top: 0px;
+    background-color: rgb(13, 110, 253);
+    width: 100%;
 }
