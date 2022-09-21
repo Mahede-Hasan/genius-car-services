@@ -20,20 +20,27 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto nav-text">
+                            <Nav.Link href="home">Home</Nav.Link>
                             <Nav.Link href="home#services">Services</Nav.Link>
                             <Nav.Link href="home#experts">Experts</Nav.Link>
-                            <NavDropdown title="Reviews" id="collasible-nav-dropdown"  className='dropdown-nav'>
+                            <NavDropdown title="Reviews" id="collasible-nav-dropdown" className='dropdown-nav'>
                                 <NavDropdown.Item className='drop-nav' href="#action/3.1">customer Review</NavDropdown.Item>
-                                <NavDropdown.Item className='drop-nav'  href="#action/3.2">
+                                <NavDropdown.Item className='drop-nav' href="#action/3.2">
                                     Services
                                 </NavDropdown.Item>
-                                <NavDropdown.Item className='drop-nav'  href="#action/3.3">Satisfaction</NavDropdown.Item>
-                                
+                                <NavDropdown.Item className='drop-nav' href="#action/3.3">Satisfaction</NavDropdown.Item>
+
                             </NavDropdown>
                         </Nav>
                         <Nav className='nav-text'>
+                        {
+                                user && <>
+                                    <Nav.Link as={Link} to="addservice">Add</Nav.Link>
+                                    <Nav.Link as={Link} to="manage">Manage</Nav.Link>
+                                </>
+                            }
                             <Nav.Link as={Link} to="about">About</Nav.Link>
-
+                           
                             {
                                 user ?
                                     <button onClick={handleSignOut} className='sign-out'>Sign Out</button>
