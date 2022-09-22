@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import Social from '../Social/Social';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import PageTitle from '../../Shared/PageTitle/PageTitle';
 
@@ -49,7 +49,7 @@ const Login = () => {
 
     let errorElement;
     if (error) {
-        errorElement = <p>Error: {error.message}</p>
+        errorElement = <p className='text-danger'>Error: {error.message}</p>
     }
 
     if (user) {
@@ -83,7 +83,7 @@ const Login = () => {
                     <a className='text-primary ps-2' href="#" onClick={handleResetPass}>Reset Password</a></p>
             </Form>
             <Social></Social>
-            <ToastContainer />
+           
         </div>
 
     );
