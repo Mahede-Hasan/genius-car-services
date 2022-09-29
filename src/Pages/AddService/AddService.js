@@ -1,11 +1,13 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const AddService = () => {
     const { register, handleSubmit } = useForm();
-    const onSubmit = data =>{
-        console.log(data)
-        const url = `http://localhost:5000/service`;
+    const navigate = useNavigate();
+    const onSubmit = (data) => {
+        const url = `https://frozen-basin-74760.herokuapp.com/service`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -13,10 +15,12 @@ const AddService = () => {
             },
             body: JSON.stringify(data)
         })
-        .then(res => res.json())
-        .then(result => {
-            console.log(result);
-        })
+            .then(res => res.json())
+            .then(result => {
+                navigate('/home')
+                toast('service added')
+
+            })
     };
     return (
         <div className='w-50 mx-auto'>

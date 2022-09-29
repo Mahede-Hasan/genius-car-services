@@ -22,14 +22,14 @@ const CheckOut = () => {
             number: event.target.number.value
         }
 
-        axios.post('http://localhost:5000/order', order)
+        axios.post('https://frozen-basin-74760.herokuapp.com/order', order)
             .then(response => {
                 console.log(response)
                 const { data } = response;
                 if (data.insertedId) {
                     toast('your order is done')
                     event.target.reset();
-                   navigate('/orders')
+                    navigate('/orders')
                 }
             })
     }
